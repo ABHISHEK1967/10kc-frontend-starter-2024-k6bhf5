@@ -2,7 +2,7 @@ import { Component } from "@angular/core";
 import { bootstrapApplication } from "@angular/platform-browser";
 import "zone.js";
 import { CommonModule } from "@angular/common";
-import { ButtonComponent } from "./app/button/button.component";
+
 import { FlexLayoutModule } from "@ngbracket/ngx-layout";
 
 import { MatBadgeModule } from "@angular/material/badge";
@@ -11,16 +11,18 @@ import { MatButtonModule } from "@angular/material/button";
 
 import { Subject, interval, takeUntil } from "rxjs";
 
+
 @Component({
   selector: "app-root",
   standalone: true,
   imports: [
     CommonModule,
-    ButtonComponent,
+
     FlexLayoutModule,
     MatBadgeModule,
     MatIconModule,
     MatButtonModule,
+
   ],
   template: `
     <div
@@ -39,7 +41,12 @@ import { Subject, interval, takeUntil } from "rxjs";
           <mat-icon style="color: white;">mail_outline</mat-icon>
         </button>
         <div fxLayout="row" fxLayoutGap="8px" style="padding-top:8px">
-          <button mat-raised-button color="primary" (click)="incrementBadge()" [disabled]="!startCounterBoolean">
+          <button
+            mat-raised-button
+            color="primary"
+            (click)="incrementBadge()"
+            [disabled]="!startCounterBoolean"
+          >
             Start
           </button>
           <button
