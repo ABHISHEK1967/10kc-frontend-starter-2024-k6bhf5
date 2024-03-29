@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
+import { Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-button',
   standalone: true,
@@ -10,4 +11,6 @@ import { MatButtonModule } from '@angular/material/button';
 export class ButtonComponent {
   @Input()
   buttonName: string = 'test';
+
+  
 }
